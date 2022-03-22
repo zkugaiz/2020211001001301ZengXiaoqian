@@ -18,9 +18,11 @@
 </head>
 <body style="background-image: url('images/bg.jpg');background-size: cover;">
 <form method="post" action="/ZengXiaoqian2020211001001301/register" style="width:25vw;height:auto;margin-top: 15%;margin-left:37%;display: flex;flex-direction: column;" onsubmit="return check()">
+    <input name="userid" type="text" placeholder="Userid" required>
     <input name="username" type="text" placeholder="Username" required>
     <input name="password" type="password" placeholder="Passwords" required id="pwd">
     <input name="email" type="email" placeholder="Email" required>
+    <input name="gender" type="text" placeholder="Gender" required>
     <input name="birthdate" type="date" placeholder="Date of Birth (yyyy-mm-dd)" required>
     <input name="submit" type="submit" value="Register">
     <input name="reset" type="reset" value="reset">

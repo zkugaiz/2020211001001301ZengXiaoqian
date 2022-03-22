@@ -16,8 +16,32 @@
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.zengxiaoqian.week3.demo.RegisterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>JDBCemoServlet</servlet-name>
+        <servlet-class>com.zengxiaoqian.week4.demo.JDBCemoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JDBCemoServlet</servlet-name>
+        <url-pattern>/jdbc</url-pattern>
+    </servlet-mapping>
+   <!-- <servlet>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <servlet-class>com.zengxiaoqian.week4.demo.ConfigDemoServlet</servlet-class>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>zengxiaoqian</param-value>
+        </init-param>
+        <init-param>
+            <param-name>studentid</param-name>
+            <param-value>2020211001001301</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>-->
 </web-app>
