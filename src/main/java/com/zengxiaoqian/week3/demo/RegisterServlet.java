@@ -68,6 +68,7 @@ public class RegisterServlet extends HttpServlet {
                 writer.println(" <th>"+rs.getString("birthdate")+"</th></tr>");
             }
             writer.println("</table>");
+            response.sendRedirect("Login.jsp");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -82,6 +83,7 @@ public class RegisterServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

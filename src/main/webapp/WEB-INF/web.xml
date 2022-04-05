@@ -28,6 +28,25 @@
         <servlet-name>JDBCemoServlet</servlet-name>
         <url-pattern>/jdbc</url-pattern>
     </servlet-mapping>
+    <listener>
+        <listener-class>com.zengxiaoqian.week6.demo.JDBCServletContextListener</listener-class>
+    </listener>
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:sqlserver://localhost:1433;database=userdb;enrypt=false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>la</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>123456789</param-value>
+    </context-param>
    <!-- <servlet>
         <servlet-name>ConfigDemoServlet</servlet-name>
         <servlet-class>com.zengxiaoqian.week4.demo.ConfigDemoServlet</servlet-class>

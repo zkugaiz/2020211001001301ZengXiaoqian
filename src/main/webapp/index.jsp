@@ -1,27 +1,27 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: ljmzxq
+  Date: 2022/4/5
+  Time: 18:24
+  To change this template use File | Settings | File Templates.
+--%>
 <%@include file="header.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>JSP-Hello Worid</title>
+    <title>index</title>
 </head>
 <body>
-<h1><%= "Welcome to my home page." %>
-</h1>
-<br/>
-<a href="Hello-Servlet">Hello Servelt-week1</a>
-</br>
-<a href="hello">Student Info Servelt-week2</a>
-</br>
-<a href="Register.jsp">Register-getParameter-weeek3</a>
-</br>
-<a href="/config">Config-parameter-week4</a>
-</br>
-<a href="Register.jsp">Register JDBC -week4</a>
-</br>
-<a href="index.jsp">include-week5</a>
-</br>
-<a href="Login.jsp">Login-week5</a>
-
+<h2>Welcome to My Online Shop Home Page.</h2><br>
+<form method="get" target="_blank" action="search">
+<input type="text" name="txt" size="30"/>
+<select name="search">
+    <option value="baidu">Baidu</option>
+    <option value="bing">Bing</option>
+    <option value="google">Google</option>
+</select>
+<input type="submit" value="Search"/>
+</form>
 </body>
 </html>
 <%@include file="footer.jsp"%>
