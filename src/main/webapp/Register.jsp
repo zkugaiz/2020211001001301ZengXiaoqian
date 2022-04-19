@@ -26,7 +26,8 @@ This is my Register JSP page.<br>
     <input name="username" type="text" placeholder="Username" required>
     <input name="password" type="password" placeholder="Passwords" required id="pwd">
     <input name="email" type="email" placeholder="Email" required>
-    <input name="gender" type="text" placeholder="Gender" required>
+    Gender:<input name="gender" type="radio"  value="Male" >Male
+           <input name="gender" type="radio"  value="Female" >Female
     <input name="birthdate" type="date" placeholder="Date of Birth (yyyy-mm-dd)" required>
     <input name="submit" type="submit" value="Register">
     <input name="reset" type="reset" value="reset">

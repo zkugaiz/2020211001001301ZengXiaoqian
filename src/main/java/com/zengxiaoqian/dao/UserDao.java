@@ -22,7 +22,18 @@ public class UserDao implements IUserDao {
 
     @Override
     public int updateUser(Connection con, User user) throws SQLException {
+        String sql="update usertable set username=?,password=?,email=?,gender=?,birthdate=? where userid=? ";
+        PreparedStatement ps=con.prepareStatement(sql);
+        ps.setString(1,user.getUsername());
+        ps.setString(2,user.getPassword());
+        ps.setString(3,user.getEmail());
+        ps.setString(4,user.getGender());
+        ps.setString(5, String.valueOf(user.getBirthdate()));
+        ps.setInt(6,user.getUserid());
+        ps.executeUpdate();
         return 0;
+
+
     }
 
 

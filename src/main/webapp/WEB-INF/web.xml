@@ -12,6 +12,14 @@
         <servlet-name>kugai</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>update</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>update</servlet-name>
+        <servlet-class>com.zengxiaoqian.controller.UpdateServlet</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.zengxiaoqian.week3.demo.RegisterServlet</servlet-class>

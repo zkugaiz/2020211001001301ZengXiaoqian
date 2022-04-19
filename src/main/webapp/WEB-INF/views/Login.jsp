@@ -12,6 +12,23 @@
         out.print("<h3>"+request.getAttribute("message")+"</h3>");
     }
 %>
+<%
+    Cookie[] allCookies=request.getCookies();
+    String username="",password="",rememberMeVal="";
+    if (allCookies!=null){
+        for(Cookie c:allCookies){
+            if (c.getName().equals("cUsername")){
+                username=c.getValue();
+            }
+            if (c.getName().equals("cPassword")){
+                password=c.getValue();
+            }
+            if (c.getName().equals("cRememberMe")){
+                rememberMeVal=c.getValue();
+            }
+        }
+    }
+%>
 <html>
 <head>
     <title>Login</title>
@@ -22,10 +39,11 @@
         }
     </style>
 </head>
-<body style="background-image: url('images/bg.jpg');background-size: cover;">
+<body>
 <form method="post" action="/ZengXiaoqian2020211001001301/Login" style="width:25vw;height:auto;margin-top: 15%;margin-left:37%;display: flex;flex-direction: column;" onsubmit="return check()">
-    <input name="username" type="text" placeholder="Username" required>
-    <input name="password" type="password" placeholder="Passwords" required id="pwd">
+    <input name="username" type="text" placeholder="Username" required value="<%=username%>">
+    <input name="password" type="password" placeholder="Passwords" required id="pwd" value="<%=password%>">
+    <input type="checkbox" name="remeberMe" value="1" <%=rememberMeVal.equals("1") ?"checked":""%>checked/>RemeberMe<br/>
     <input name="submit" type="submit" value="Login">
     <input name="reset" type="reset" value="reset">
 </form>
