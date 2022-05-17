@@ -31,11 +31,12 @@ public class AddProductServlet extends HttpServlet {
         int categoryId = request.getParameter("categoryId") != null ? Integer.parseInt(request.getParameter("categoryId")) : 0;
         String productDescription = request.getParameter("productDescription");
         InputStream inputStream = null;
-        Part fileParts =(Part) request.getPart("picture");
-        if(fileParts!=null){
-            inputStream=fileParts.getInputStream();
-        }
         Product product=new Product();
+       //Part fileParts =(Part) request.getPart("picture");
+        //if(fileParts!=null){
+          //  inputStream=fileParts.getInputStream();
+        //}
+
         product.setProductname(productName);
         product.setProductdescription(productDescription);
         product.setPicture(inputStream);
@@ -58,7 +59,7 @@ public class AddProductServlet extends HttpServlet {
 
         List<Category> categoryList= Category.findAllCategory(con);
         request.setAttribute("categoryList",categoryList);
-        String path ="WEB-INF/views/admin/addProduct.jsp";
+        String path ="/WEB-INF/views/admin/addProduct.jsp";
         request.getRequestDispatcher(path).forward(request,response);
         }catch (SQLException throwables){
             throwables.printStackTrace();
