@@ -68,18 +68,22 @@ public class Category {
     public  static List<Category> findAllCategory(Connection con) throws SQLException {
         String sql="select * from category";
         List<Category> list = new ArrayList<Category>();
-        PreparedStatement pt = con.prepareStatement(sql);
-        ResultSet rs = pt.executeQuery();
-        while(rs.next()){
-            Category c=new Category();
-            c.setCategoryid(rs.getInt("categoryid"));
-            c.setCategoryname(rs.getString("categoryname"));
-            c.setDescription(rs.getString("description"));
-            list.add(c);
+        try {
+            PreparedStatement pt = con.prepareStatement(sql);
+            ResultSet rs = pt.executeQuery();
+            while (rs.next()) {
+                Category c = new Category();
+                c.setCategoryid(rs.getInt("categoryid"));
+                c.setCategoryname(rs.getString("categoryname"));
+                c.setDescription(rs.getString("description"));
+                list.add(c);
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
         }
         return list;
     }
-    public static String findByCategory(Connection con,int categoryid)throws SQLException{
+    public static String findByCategoryID(Connection con,int categoryid)throws SQLException{
         String sql="select * from category where categoryid=?";
         List<Category> list = new ArrayList<Category>();
         PreparedStatement pt = con.prepareStatement(sql);

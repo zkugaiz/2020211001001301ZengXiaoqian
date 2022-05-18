@@ -23,7 +23,7 @@
 							<c:forEach var="c" items="${categoryList}">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="<%=basePath%>shop?categoryId=${c.categoryId}">${c.categoryName}</a></h4>
+									<h4 class="panel-title"><a href="<%=basePath%>shop?categoryId=${c.categoryid}">${c.categoryname}</a></h4>
 								</div>
 								
 							</div>
@@ -60,14 +60,14 @@
 									<div class="productinfo text-center">
 										<img src="<%=basePath%>getImg?id=1" alt="" style="height: 150px; width: 150px"/>
 										<h2>${p.price} </h2>
-										<p>${p.productName}</p>
-										<a href="<%=basePath %>cart?productId=${p.productId}&action=add" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<p>${p.productname}</p>
+										<a href="<%=basePath %>cart?productId=${p.productid}&action=add" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 									
 								</div>
 							<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-										<li><a href="<%=basePath%>productDetails?id=${p.productId}"><i class="fa fa-plus-square"></i>Product-Details</a></li>
+										<li><a href="<%=basePath%>productDetails?id=${p.productid}"><i class="fa fa-plus-square"></i>Product-Details</a></li>
 									</ul>
 								</div>
 							</div>

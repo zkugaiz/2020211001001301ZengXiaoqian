@@ -13,7 +13,7 @@
 							<c:forEach var="c" items="${categoryList}">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="<%=basePath %>shop?categoryId=${c.categoryId}">${c.CategoryName}</a></h4>
+									<h4 class="panel-title"><a href="<%=basePath %>shop?categoryId=${c.categoryid}">${c.categoryname}</a></h4>
 								</div>
 							</div>
 							</c:forEach>
@@ -41,7 +41,7 @@
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="<%=basePath %>getImg?id=${p.productId}" alt="" />
+								<img src="<%=basePath %>getImg?id=${p.productid}" alt="" />
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								
@@ -80,15 +80,15 @@
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
 								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2>${c.productName}</h2>
-								<p>Web ID: ${p.productId}</p>
+								<h2>${c.productname}</h2>
+								<p>Web ID: ${p.productid}</p>
 								<img src="images/product-details/rating.png" alt="" /><!-- picture -->
 								<p></p>
 									<p>RMB  ${p.price}</p>
 									<form action="<%=basePath %>cart">
 									<!-- <label>Quantity:</label>
 									<input type="text"  name="quantity"/> -->
-									<input type="hidden" value="${p.productId}" name="productId"/>
+									<input type="hidden" value="${p.productid}" name="productId"/>
 									<input type="hidden" value="add" name="action"/>
 									<div><br/>
 									<button type="submit" class="btn btn-fefault cart">
@@ -113,7 +113,7 @@
 						<div class="tab-pane fade active in" id="details" >
 								<div class="col-sm-12">
 									
-									<p>${p.productDescription}</p>
+									<p>${p.productdescription}</p>
 								
 								</div>
 							</div>

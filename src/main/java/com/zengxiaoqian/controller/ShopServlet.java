@@ -14,9 +14,12 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "ShopServlet")
+@WebServlet(name = "ShopServlet",value = "/shop")
 public class ShopServlet extends HttpServlet {
     Connection con = null;
+    public void init() throws  ServletException{
+        con =(Connection)getServletContext().getAttribute("con");
+    }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
