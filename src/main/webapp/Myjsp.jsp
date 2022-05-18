@@ -17,7 +17,7 @@
 <form method="post" action="MyDearJsp.jsp" >
 
     <input name="name" type="text" placeholder="name" required><br>
-    <input name="class" type="text" placeholder="class" required ><br>
+    <input name="clas" type="text" placeholder="class" required ><br>
     <input name="id" type="text" placeholder="id" required><br>
     <input name="submit" type="submit" value="Send date to server">
     <input name="reset" type="reset" value="reset">
