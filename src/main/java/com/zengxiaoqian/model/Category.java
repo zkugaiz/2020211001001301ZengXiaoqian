@@ -80,7 +80,7 @@ public class Category {
         return list;
     }
     public static String findByCategory(Connection con,int categoryid)throws SQLException{
-        String sql="select * from category where categoryid=?" + categoryid;
+        String sql="select * from category where categoryid=?";
         List<Category> list = new ArrayList<Category>();
         PreparedStatement pt = con.prepareStatement(sql);
         pt.setInt(1,categoryid);

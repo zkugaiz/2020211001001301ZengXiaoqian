@@ -12,18 +12,18 @@ public class ProductDao implements  IProductDao{
     @Override
     public int save(Product product, Connection con) throws SQLException {
         int n = 0;
-        String sql = "insert into product(ProductName,ProductDescription,Picture,price,CategoryID) values(?,?,?,?,?)";
+        String sql = "insert into product(ProductName,ProductDescription,price,CategoryID) values(?,?,?,?)";
         PreparedStatement pt = con.prepareStatement(sql);
         pt.setString(1, product.getProductname());
         pt.setString(2, product.getProductdescription());
-        if(product.getPicture()!=null) {
+        /*if(product.getPicture()!=null) {
             //for sql server
             pt.setBinaryStream(3, product.getPicture());
             //for mysql
             //   pt.setBlob(3, product.getPicture());
-        }
-        pt.setDouble(4, product.getPrice());
-        pt.setInt(5, product.getCategoryid());
+        }*/
+        pt.setDouble(3, product.getPrice());
+        pt.setInt(4, product.getCategoryid());
         n = pt.executeUpdate();
         if (n > 0) {
             return n;
@@ -93,11 +93,12 @@ public class ProductDao implements  IProductDao{
             ResultSet rs = pt.executeQuery();
             while (rs.next()){
                 Product product=new Product();
-                product.setCategoryid(rs.getInt("productid"));
+                product.setProductid(rs.getInt("productid"));
                 product.setProductname(rs.getString("productname"));
                 product.setProductdescription(rs.getString("productdescription"));
                 product.setPrice(rs.getDouble("price"));
                 product.setCategoryid(rs.getInt("categoryid"));
+                List.add(product);
             }
             System.out.println("successful");
         }catch (SQLException e){
