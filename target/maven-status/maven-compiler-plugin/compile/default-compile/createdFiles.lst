@@ -4,6 +4,7 @@ com\zengxiaoqian\week4\demo\ConfigDemoServlet.class
 com\zengxiaoqian\week6\demo\JDBCServletContextListener.class
 com\zengxiaoqian\week5\demo\LoginServlet.class
 com\zengxiaoqian\dao\IUserDao.class
+com\zengxiaoqian\Lab1\LifeCycleServlet.class
 com\zengxiaoqian\controller\HomeServlet.class
 com\zengxiaoqian\controller\UpdateServlet.class
 com\zengxiaoqian\week3\demo\RegisterServlet.class
@@ -13,6 +14,7 @@ com\zengxiaoqian\filter\FrontEndAuthenticationFilter.class
 com\zengxiaoqian\dao\ProductDao.class
 com\zengxiaoqian\week6\demo\SearchServlet.class
 com\zengxiaoqian\controller\ProductListServlet.class
+com\zengxiaoqian\Lab1\MyJspServlet.class
 com\zengxiaoqian\controller\AdminHomeServlet.class
 com\zengxiaoqian\model\User.class
 com\zengxiaoqian\controller\LogoutServlet.class
