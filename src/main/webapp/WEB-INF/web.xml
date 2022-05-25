@@ -92,5 +92,14 @@
         <servlet-name>MyJspServlet</servlet-name>
         <url-pattern>/MyJspServlet</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>YourNameFilter</filter-name>
+        <filter-class>com.zengxiaoqian.Lab2.YourNameFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>YourNameFilter</filter-name>
+        <url-pattern>/lab2/welcome.jsp</url-pattern>
+    </filter-mapping>
+
 
 </web-app>

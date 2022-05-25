@@ -74,5 +74,39 @@
     <welcome-file-list>
         <welcome-file>home</welcome-file>
     </welcome-file-list>
+    <servlet>
+        <servlet-name>LifeCycleServlet</servlet-name>
+        <servlet-class>com.zengxiaoqian.Lab1.LifeCycleServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LifeCycleServlet</servlet-name>
+        <url-pattern>/life</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MyJspServlet</servlet-name>
+        <servlet-class>com.zengxiaoqian.Lab1.MyJspServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyJspServlet</servlet-name>
+        <url-pattern>/MyJspServlet</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.zengxiaoqian.Lab2.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>LoginFilter</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>YourNameFilter</filter-name>
+        <filter-class>com.zengxiaoqian.Lab2.YourNameFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>YourNameFilter</filter-name>
+        <url-pattern>YourNameFilter</url-pattern>
+    </filter-mapping>
 
 </web-app>
