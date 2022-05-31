@@ -173,4 +173,4 @@
     
     initMap();//鍒涘缓鍜屽垵濮嬪寲鍦板浘
 </script>
-<%@include file="WEB-INF/views/_footer.jsp" %>
+<%@include file="footer.jsp" %>

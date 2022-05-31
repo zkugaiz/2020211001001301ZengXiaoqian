@@ -33,5 +33,6 @@ public class AdminOrderServlet extends HttpServlet {
         List<Order> orderList=orderDao.findAll(con);
         request.setAttribute("orderList",orderList);
         String path="/WEB-INF/views/admin/orderList.jsp";
+        request.getRequestDispatcher(path).forward(request,response);
     }
 }

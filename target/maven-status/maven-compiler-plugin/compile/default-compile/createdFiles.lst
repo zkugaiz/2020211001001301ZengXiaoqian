@@ -11,6 +11,7 @@ com\zengxiaoqian\controller\HomeServlet.class
 com\zengxiaoqian\controller\UpdateServlet.class
 com\zengxiaoqian\week3\demo\RegisterServlet.class
 com\zengxiaoqian\model\Category.class
+com\zengxiaoqian\controller\ContactUsServlet.class
 com\zengxiaoqian\week1\demo\HelloServlet.class
 com\zengxiaoqian\filter\FrontEndAuthenticationFilter.class
 com\zengxiaoqian\dao\ProductDao.class

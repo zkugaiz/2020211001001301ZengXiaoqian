@@ -16,8 +16,8 @@
 							<ul class="nav nav-pills nav-stacked">
 								<li><a href="<%=basePath%>admin/home">Home</a></li>
 								<li><a href="<%=basePath%>admin/productList">Product</a></li>
-								<li><a href="<%=basePath%>admin/orderList.jsp">Order</a></li>
-								<li><a href="<%=basePath%>admin/userList.jsp">User</a></li>
+								<li><a href="<%=basePath%>admin/orderList">Order</a></li>
+								<li><a href="<%=basePath%>admin/userList">User</a></li>
 							</ul>
 						</div>
 					</div>
