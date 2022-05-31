@@ -39,7 +39,23 @@ public class UserDao implements IUserDao {
 
     @Override
     public User findById(Connection con, Integer id) throws SQLException {
-        return null;
+        String sql="select userid,username,password,email,gender,birthdate from usertable where userid=?  ";
+        PreparedStatement st=con.prepareStatement(sql);
+        st.setInt(1,id);
+        ResultSet rs=st.executeQuery();
+
+        User user=null;
+        if (rs.next()){
+            user=new User();
+            user.setUserid(rs.getInt("userid"));
+            user.setUsername(rs.getString("username"));
+            user.setPassword(rs.getString("password"));
+            user.setEmail((rs.getString("email")));
+            user.setGender(rs.getString("gender"));
+            user.setBirthdate(rs.getDate("birthdate"));
+        }
+
+        return user;
     }
 
     @Override

@@ -14,7 +14,7 @@
 <body>
 <h2>Welcome,
     <%--todo 9 : use jsp:useBean to access the same instance of login bean from request scope--%>
-    <jsp:useBean id="Login" class="com.zengxiaoqian.Lab2.Login" scope="request" beanName="Login"></jsp:useBean>
+    <jsp:useBean id="Login" class="com.zengxiaoqian.Lab2.Login" scope="request"></jsp:useBean>
     <%--todo 10 : use jsp:getProperty to display username --%>
     <jsp:getProperty name="Login" property="username"/>
 </h2>
